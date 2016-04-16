@@ -1,0 +1,20 @@
+<div class="main_div">
+    <div class="left_container">
+
+        <% _.each(images, function(image) { %>
+            <% if (image) { %><img src="<%= image.url %>" width="120" height="120" class="img-thumbnail img-responsive"><% }else{  %><img src="img/real_estate.jpg" width="120" height="120" class="img-thumbnail img-responsive"><% } %>
+        <% }); %>
+    </div>
+    <div class="container-fluid right_container">
+        <strong><%- location.locality %>, <%- location.region %> - <%- location.postal %></strong><br />
+
+        <span><%- location.adrress %></span><br />
+
+        <span>Purchase type: <%- purchase_types %></span><br />
+
+        <%- cur_data.beds %> beds, <%- cur_data.baths %> baths, <strong>$<%- cur_data.price %></strong><br />
+        <a href="mailto:<%- contact.email %>">Email</a>
+        <br /><strong><a href="phone:<%- contact.phone %>"><%- contact.phone %></a></strong><br />
+        <button type="button" class="btn btn-primary btn-xs back" data-toggle="modal">Back</button><br />
+    </div>
+</div>

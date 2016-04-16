@@ -1,0 +1,13 @@
+.main_div {
+    clear:both;
+    margin-top: 10px;
+    padding: 50px;
+}
+
+.left_container {
+    float:left; width:150px
+}
+
+.right_container {
+    float:left
+}
